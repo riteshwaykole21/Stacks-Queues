@@ -28,6 +28,23 @@ namespace StacksAndQueues
                 Console.WriteLine($"{newNode.data} is inserted into Queue");
             }
         }
+        public void Deque()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Queue Is empty,Deletion is not possible");
+                return;
+            }
+            else
+            {
+                while (this.head != null)
+                {
+                    Console.WriteLine($"{head.data} has been removed");
+                    head = head.next;
+                    break;
+                }
+            }
+        }
         public void Display()
         {
             Node temp = this.head;
@@ -42,6 +59,7 @@ namespace StacksAndQueues
                 Console.Write(temp.data+" ");
                 temp= temp.next;
             }
+            Console.WriteLine();
         }
     }
 }

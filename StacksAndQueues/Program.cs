@@ -14,7 +14,8 @@ namespace StacksAndQueues
             Console.WriteLine("Please Select as per the Below Given Option : \n" +
                "Press 1: Creating coutom stack using LinkedList.\n"  +
                "Press 2: Using Peek and Pop in stack . \n"  +
-               "Press 3: Using Enque in Queue . \n");
+               "Press 3: Using Enque in Queue . \n" +
+               "Press 4: using Deque in Queue. \n");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -40,6 +41,17 @@ namespace StacksAndQueues
                     queueObj.Enque(30);
                     queueObj.Enque(70);
                     queueObj.Display();
+                    break;
+                case 4:
+                    LinkedListQueue queueObj1 = new LinkedListQueue();
+                    queueObj1.Enque(56);
+                    queueObj1.Enque(30);
+                    queueObj1.Enque(70);
+                    queueObj1.Display();
+                    queueObj1.Deque();
+                    queueObj1.Display();
+                    queueObj1.Deque();
+                    queueObj1.Display();
                     break;
                 default:
                     break;
