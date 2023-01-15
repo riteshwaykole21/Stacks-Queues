@@ -19,6 +19,44 @@ namespace StacksAndQueues
             top = newNode;
             Console.WriteLine($"New Node {data} is added");
         }
+        public int Peek()
+        {
+            if(top== null)
+            {
+                Console.WriteLine("List is Empty");
+                return 0;
+            }
+            else
+            {
+                Console.WriteLine("Top Most Element is :" +top.data);
+                return top.data;
+            }
+        }
+        public void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("List is Empty");
+                top = top.next;
+            }
+        }
+        public bool isEmpty()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is Empty");
+                return true;
+
+            }
+            else
+            {
+                while(top!=null)
+                {
+                    Pop();
+                }
+                return true;
+            }
+        }
         public void Display()
         {
             Console.WriteLine("Displaying Nodes");
