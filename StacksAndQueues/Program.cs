@@ -13,7 +13,8 @@ namespace StacksAndQueues
             Console.WriteLine("Welcome To Stack Program in data Structure");
             Console.WriteLine("Please Select as per the Below Given Option : \n" +
                "Press 1: Creating coutom stack using LinkedList.\n"  +
-               "Press 2: Using Peek and Pop in stack . \n");
+               "Press 2: Using Peek and Pop in stack . \n"  +
+               "Press 3: Using Enque in Queue . \n");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -33,6 +34,13 @@ namespace StacksAndQueues
                     Console.WriteLine("Is List is empty?"+stackobject1.isEmpty());
                     stackobject1.Display();
                     break ;
+                case 3:
+                    LinkedListQueue queueObj = new LinkedListQueue();
+                    queueObj.Enque(56);
+                    queueObj.Enque(30);
+                    queueObj.Enque(70);
+                    queueObj.Display();
+                    break;
                 default:
                     break;
             }
